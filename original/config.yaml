@@ -1,0 +1,55 @@
+API:
+  LARGE_API_KEY: ''
+  LARGE_BASE_URL: http://localhost:11434
+  LARGE_MODE: api
+  LARGE_MODEL: llama3:latest
+  SMALL_API_KEY: ''
+  SMALL_BASE_URL: http://localhost:11434
+  SMALL_MODE: api
+  SMALL_MODEL: mistral:latest
+HUGGINGFACE:
+  HUB_PATH: yourusername/your-path-here
+  PRIVATE: 'False'
+  PUSH_TO_HUB: 'False'
+PATH:
+  DEFAULT_PROMPTS: ./prompts
+  INPUT: ./processed_books
+  OUTPUT: ./output_astrology_dataset
+  PROMPTS: ./prompts
+PHASE:
+  PHASE_INDEX: '0'
+  WORK_IN_PHASES: 'True'
+SCRAPING:
+  MAX_BOOKS: '5'
+  MAX_FAILURES: '5'
+  START_URL: ''
+  USE_GUTENBERG: 'False'
+SKIP:
+  ANSWER_RELEVANCY_CHECK: 'False'
+  CONVERSATION_GENERATION: 'False'
+  FILTER_CHUNKS: 'False'
+  QUESTION_CHECK: 'False'
+  REPAIR_QA_TUPLES: 'True'
+SYSTEM:
+  CHUNK_SIZE: '900'
+  COMPLETION_MODE: 'False'
+  CONCURRENCY_LIMIT: '2'
+  CONVERSATION_INSTRUCTIONS: For this conversation, you are generating a chat between
+    an astrology expert AI assistant and a human.
+  DOUBLE_CHECK_COUNTER: '2'
+  DO_NOT_USE_SYSTEM_PROMPTS: 'False'
+  FINAL_ASSISTANT_PROMPTS_NO_RAG: "[\n  \"You are a helpful AI assistant specialized\
+    \ in astrology.\",\n  \"You are an astrology expert AI with deep knowledge of\
+    \ zodiac signs, planetary influences, and horoscopes. Answer questions accurately.\"\
+    ,\n  \"You are an AI assistant with expertise in astrology. Provide insightful\
+    \ answers.\"\n]"
+  FINAL_ASSISTANT_PROMPTS_RAG: "[\n  \"You are a helpful AI assistant specialized\
+    \ in astrology. Use this context:\\n{data}\",\n  \"You are an astrology expert\
+    \ AI. Use this context:\\n{data}\\nAnswer questions accurately.\",\n  \"You are\
+    \ an AI with expertise in astrology. Here is some context:\\n{data}\\nAnswer questions\
+    \ accordingly.\"\n]"
+  RAG_FAILURE_PERCENTAGE: '0.1'
+  STOP: 'True'
+  SUBSET_SIZE: '500'
+  USE_FILENAMES: 'False'
+  USE_SUBSET: 'True'

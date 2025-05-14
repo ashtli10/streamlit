@@ -1,0 +1,31 @@
+API:
+  API_KEY: ''
+  BASE_URL: http://localhost:11434
+  LARGE_LOGICAL_MODEL: llama3:latest
+  LOGICAL_MODEL: mistral:latest
+  QUANTIZATION_LARGE: none
+  QUANTIZATION_SMALL: none
+CLASSIFICATION:
+  CLASSES: '[''negative'', ''positive'']'
+  DESC: Classify whether the text (a movie review) is positive or negative.
+  PREDICT_ON_WHOLE_SET_AT_THE_END: 'False'
+PATH:
+  DEFAULT_PROMPTS: ./prompts_classifier
+  INPUT: ./proccesed_books
+  OUTPUT: ./ai_training_data
+  PROMPTS: ./prompts_classifier
+SYSTEM:
+  CHUNK_SIZE: '900'
+  COMPLETION_MODE: 'False'
+  CONCURRENCY_LIMIT: '2'
+  DOUBLE_CHECK_COUNTER: '1'
+  MODE: local
+  REQUIRED_ACCURACY: '0.9'
+  STOP: 'True'
+TRAINING:
+  MAX_ITERS: '5'
+  MODEL_PATH: distilbert-base-uncased
+  TEST_SET_SIZE: '30'
+  TRAIN_SET_INCREMENT: '100'
+  TRAIN_SET_SIZE: '500'
+  TRUNCATION_TYPE: head-tail
